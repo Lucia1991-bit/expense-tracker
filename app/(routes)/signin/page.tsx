@@ -1,5 +1,4 @@
 "use client";
-import React, { FormEvent, useEffect, useState } from "react";
 import { EmailIcon, LockIcon } from "@chakra-ui/icons";
 import {
   Alert,
@@ -21,6 +20,7 @@ import {
   useToast,
   VStack,
 } from "@chakra-ui/react";
+import React, { FormEvent, useEffect, useState } from "react";
 import { auth } from "@/app/ lib/firebase";
 import {
   AuthError,
@@ -85,6 +85,7 @@ const SigninPage = () => {
       setIsLoading(false);
       setEmail("");
       setPassword("");
+      //重新加載頁面
       router.push("/signin");
     } catch (error) {
       const errorMessage = handleFirebaseError(error as AuthError);
@@ -111,6 +112,8 @@ const SigninPage = () => {
       setIsLoading(false);
       setEmail("");
       setPassword("");
+
+      //延遲後跳轉至記帳頁面
       setTimeout(() => {
         router.push("/accounting");
       }, 500);
@@ -135,7 +138,7 @@ const SigninPage = () => {
     <Box
       maxWidth="600px"
       minWidth="300px"
-      width="600px"
+      width={{ lg: "600px", base: "90%" }}
       margin="auto"
       mt="100px"
     >

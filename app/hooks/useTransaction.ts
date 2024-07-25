@@ -15,7 +15,6 @@ import {
   where,
 } from "firebase/firestore";
 
-import { onAuthStateChanged } from "firebase/auth";
 import { db, auth } from "../ lib/firebase";
 import { Transaction } from "../type";
 

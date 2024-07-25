@@ -64,7 +64,7 @@ const OAuth = () => {
       <Box position="relative" py={10} width="full">
         <Divider borderWidth="1px" width="100%" />
         <AbsoluteCenter bg={"#f7f7f7"} px="4">
-          <Text fontSize="sm" color="gray.500">
+          <Text fontSize="sm" color="gray.500" whiteSpace="nowrap">
             或使用以下方式登入
           </Text>
         </AbsoluteCenter>
